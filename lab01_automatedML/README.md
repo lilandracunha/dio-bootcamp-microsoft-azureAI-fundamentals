@@ -1,20 +1,23 @@
-## Azure Machine Learning
+# Azure Machine Learning
 
 <br>
 <p align = "justify">Descrição: Neste LAB, vamos aprender a criar nossa conta no Azure e explorar as capacidades de Machine Learning da plataforma para desenvolver nossa primeira automação prática. Ao aplicar implementações e soluções escaláveis de aprendizado de máquina na nuvem da Microsoft, adquiriremos conhecimentos valiosos e experiência na construção de soluções eficientes.
 <br><br>
 
-> [!NOTE] As etapas descritas neste laboratório foram executadas a partir das orientações presentes na documentação oficial do Microsoft Azure: <a href = "https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/01-machine-learning.html">Explore Automated Machine Learning in Azure Machine Learning</a>
+> [!NOTE]
+> As etapas descritas neste laboratório foram executadas a partir das orientações presentes na documentação oficial do Microsoft Azure: <a href = "https://microsoftlearning.github.io/mslearn-ai-fundamentals/Instructions/Labs/01-machine-learning.html">Explore Automated Machine Learning in Azure Machine Learning</a>
+
+<br><br>
 
 ## Criando o espaço de trabalho no Azure AI
 Após criar uma conta no portal Azure, o primeiro passo para atuar com os serviços de machine learning disponibilizados é seguir para a configuração do espaço de trabalho:
 1. Acesse o <a href = "https://portal.azure.com">portal Azure</a> e faça o login através da conta cadastrada;
 
 2. Ao acessar a página inicial do portal, selecione a opção "+ Create a resource/+ Criar um recurso", pesquise por Azure Machine Learning e, ao localizá-lo, clique em "Create/Criar":
-<img src = "azureHomeCreateResource"> <img src = "createAzureMLResource">
-
-A opção selecionada acima irá carregar a página de criação do recurso Azure Machine Learning, cujas configurações podem ser visualizadas a seguir: 
-<img src = "createAzureMLResourceSettings">
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/assets/createAzureMLResource.png" align = "center"/>
+<br>
+A opção selecionada acima irá carregar a página de criação do recurso Azure Machine Learning, cujas configurações podem ser visualizadas a seguir:
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/assets/createAzureMLResourceSettings.png" align = "center"/>
 
   - Subscription/Assinatura: Sua assinatura do Azure - Por padrão, este campo já estará preenchido conforme a assinatura vigente na conta;
     - Resource group/Grupo de recursos: Um grupo é uma coleção de recursos que compartilham o mesmo ciclo de vida, permissões e políticas - Selecione um criado anteriormente ou crie um novo grupo de recursos; 
@@ -26,16 +29,20 @@ A opção selecionada acima irá carregar a página de criação do recurso Azur
   - Container registry/Registro de contêiner: Um registro de contêiner é usado para registrar imagens do Docker usadas em treinamento e implantações; para minimizar custos, um novo recurso do registro é criado apenas depois de construir a sua primeira imagem. Alternativamente, você pode optar por criar o recurso agora ou selecionar um existente em sua assinatura - Iremos preencher este campo como None/Nenhum (será criado automaticamente na primeira vez que você implantar um modelo em um contêiner).
 
 3. Selecione "Review + create/Revisar + criar" e depois "Create/Criar" e aguarde a conclusão do deploy.
-<img src = "deployAzureMLResourceSettings">
 
-> [!NOTE] Existem outras abas na criação do workspace, porém para o laboratório não iremos aplicar alterações para elas.
+<br>
+
+> [!IMPORTANT]
+> Existem outras abas na criação do workspace, porém para o laboratório não iremos aplicar alterações para elas.
+
+<br><br>
 
 ## Utilizando aprendizado de máquina automatizado para treinar um modelo
 <p align = "justify">O aprendizado de máquina automatizado permite que sejam aplicados vários algoritmos e parâmetros para treinar modelos e identificar o que melhor se aplica aos seus objetivos. 
 <p align = "justify">Para este laboratório será utilizado um <a href = "https://capitalbikeshare.com/system-data">dataset de detalhes históricos de aluguel de bicicletas</a> e o objetivo é treinar um modelo que prevê a quantidade de aluguéis esperada em um determinado dia com base em características sazonais e meteorológicas.
 
 1. No <a href = "https://ml.azure.com/?azure-portal=true">estúdio Azure Machine Learning</a>, dentro do workspace criado, acesse a opção ML Automatizado;
-<img src = "createNewAutomatedML">
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/assets/createNewAutomatedML.png" align = "center"/>
 
 2. Crie um novo serviço de ML automatizado ("+ New Automated ML job/+ Novo trabalho de ML automatizado") com as configurações a seguir, clicando em "Next/Avançar" conforme necessário para avançar:\
     Basic settings/Configurações básicas:
@@ -65,7 +72,8 @@ A opção selecionada acima irá carregar a página de criação do recurso Azur
             - Skip rows/Ignorar linhas: None/Nenhuma;
             - Dataset contains multi-line data/Conjunto de dados com dados de várias linhas: Não marcar esta opção;\
         Finalizando estas configurações, teremos a seguinte visualização: 
-        <img src = "createDatasetSettings">
+        <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/assets/createDatasetSettings.png" align = "center"/>
+                
         - Schema/Esquema:
             - Para esta opção iremos selecionar tudo, exceto "Path";
         - Review/Examinar: Revise as informações inseridas;
@@ -80,7 +88,8 @@ A opção selecionada acima irá carregar a página de criação do recurso Azur
         - Explain best model/Explicar o melhor modelo: Desmarque esta opção;
         - Use all supported models/Usar todos os modelos suportados: Desmarque esta opção. Para o laboratório iremos restringir o modelo para tentar apenas algoritmos específicos;
         - Allowed models/Modelos permitidos: Selecionar apenas os modelos RandomForest e LightGBM. Em outros cenários faz-se importante testar o máximo possível, porém cada modelo testado aumenta o tempo de execução do job;
-        <img src = "automatedMLTaskSettings">
+        <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/assets/automatedMLTaskSettings.png" align = "center"/>
+        
     - Limits/Limites (expanda esta seção para visualizar as opções):
         - Max trials/Máximo de avaliações: 3;
         - Max concurrent trials/Máximo de avaliações simultâneas: 3;
@@ -101,19 +110,23 @@ A opção selecionada acima irá carregar a página de criação do recurso Azur
     - Virtual machine size/Tamanho da máquina virtual: Standard_DS3_V2;
     - Number of instances/Número de instâncias: 1.
 3. Finalizando a etapa acima (Compute) basta clicar em Next/Avançar para revisar o trabalho:
-<img src = "submitTrainingJob">
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/assets/submitTrainingJob.png" align = "center"/>
 
 4. Após revisão, clicar em "Submit training job/Enviar trabalho de treinamento" e aguardar a conclusão do envio.
 
+<br><br>
+
 ## Validando as métricas aplicadas
 <p align = "justify">Após a conclusão do envio do trabalho é possível visualizar o resumo do que foi executado através da guia Overview/Visão geral. Dentro desta guia, selecione o melhor modelo retornado:
-<img src = "bestModelSummary">
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/assets/bestModelSummary.png" align = "center"/>
 
 <p align = "justify">Selecionando o melhor modelo serão apresentadas informações sobre ele e, neste momento, iremos acessar a guia Metrics/Métricas.
 <p align = "justify">Através da guia Metrics podemos visualizar, dentre outras informações importantes, dois gráficos denominados residuals e predicted_true:
-<img src = "bestModelMetrics">
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/assets/bestModelMetrics.png" align = "center"/>
 
 <p align = "justify">Observe os gráficos citados acima, pois eles mostram o desempenho do modelo: O gráfico residuals mostra os resíduos, as diferenças entre os valores previstos e os reais, enquanto que o gráfico predicted_true compara os valores previstos com os valores verdadeiros. 
+
+<br><br>
 
 ## Implantando e testando o melhor modelo
 <p align = "justify">Na guia Model/Modelo do melhor modelo treinado, selecione Deploy/Implantar e use a opção Web service/Serviço Web para implantar o modelo com as configurações descritas abaixo:
@@ -122,6 +135,8 @@ A opção selecionada acima irá carregar a página de criação do recurso Azur
 - Description/Descrição: Predict cycle rentals;
 - Compute type/Tipo de computação: Azure Container Instance/Instância de Contêiner do Azure;
 - Enable authentication/Habilitar autenticação: Selecione esta opção, clique em Deploy/Implantar e aguarde.
+
+<br><br>
 
 ## Testando a implantação
 <p align = "justify">Após a finalização do deploy podemos seguir para os testes com o modelo:
@@ -161,4 +176,4 @@ A opção selecionada acima irá carregar a página de criação do recurso Azur
         ]
     }
     ```
-<img src = "predictRentals">
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/assets/predictRentals.png" align = "center"/>
