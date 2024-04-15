@@ -183,4 +183,7 @@ A opção selecionada acima irá carregar a página de criação do recurso <i><
 <br>
 
 <p align = "justify">É possível simular outros valores, para isto, basta alterar os campos desejados no JSON do <i>input</i> apresentado na etapa 3 desta seção e testar novamente.
-<p align = "justify">Após o final da criação do modelo, o Azure automaticamente gera o <i>script</i> e um <i>notebook</i> que podem ser acessados no menu esquerdo atravês do caminho: <b>Notebooks > Users > live > job criado</b>.
+<p align = "justify">Após o final da criação do modelo, o Azure automaticamente gera o <i>script</i> e um <i>notebook</i> para execução que podem ser acessados no menu esquerdo através do caminho: <b>Notebooks > Users > live > job criado</b>. Caso deseje consultar os documentos criados automaticamente durante o meu teste, acesse os links a seguir:
+
+  - <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/python/autoMLScript.py">Auto ML Generated Code: Script Python</a>
+  - <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/python/autoMLScript_runNotebook.ipynb">Auto ML Generated Code: Run notebook</a>
