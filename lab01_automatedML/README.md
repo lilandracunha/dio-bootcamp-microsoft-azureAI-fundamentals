@@ -187,3 +187,24 @@ A opção selecionada acima irá carregar a página de criação do recurso <i><
 
   - <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/python/autoMLScript.py">Auto ML Generated Code: Script Python</a>
   - <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/python/autoMLScript_runNotebook.ipynb">Auto ML Generated Code: Run notebook</a>
+
+<br><br>
+
+## Limpando o ambiente
+<p align = "justify">Uma vez que estamos utilizando uma assinatura gratuita para os laboratórios, é importante avaliar a necessidade de manter o serviço criado, pois este ficará hospedado em um contêiner do Azure e poderá consumir os recursos disponíveis na conta. 
+<p align = "justify">Para a exclusão do serviço, no estúdio Azure Machine Learning, acesse a guia <i>Endpoints</i>/Pontos de extremidade, selecione o serviço criado (predict-rentals, por exemplo) e siga para <i>Delete</i>/Excluir. 
+
+<br>
+<img src = "deleteEndpoint"/>
+
+> [!WARNING]
+> Excluir o serviço na guia <i>Endpoints</i>/Pontos de extremidade garante que sua assinatura não sofrerá cobranças por recursos de computação, porém ainda haverá a cobrança relacionada ao armazenamento dos dados enquanto o espaço de trabalho existir na sua conta.
+> Caso não deseje executar outras validações no serviço criado, é possível seguir com a exclusão do espaço de trabalho e os recursos associados, conforme a seguir:
+
+1. No portal <a href = "https://portal.azure.com/">Azure</a>, acesse o menu esquerdo, busque pela opção <i>Resource groups</i>/Grupos de recursos e clique no recurso a ser removido de seu espaço de trabalho;
+2. Clique em <i>Delete resource group</i>/Excluir grupo de recurso, digite o nome do recurso para confirmação e siga para <i>Delete</i>.
+
+<br>
+<img src = "deleteResourceGroup"/>
+
+<br><br>
