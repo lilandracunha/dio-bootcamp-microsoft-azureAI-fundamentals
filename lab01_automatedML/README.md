@@ -195,7 +195,7 @@ A opção selecionada acima irá carregar a página de criação do recurso <i><
 <p align = "justify">Para a exclusão do serviço, no estúdio Azure Machine Learning, acesse a guia <i>Endpoints</i>/Pontos de extremidade, selecione o serviço criado (predict-rentals, por exemplo) e siga para <i>Delete</i>/Excluir. 
 
 <br>
-<img src = "deleteEndpoint"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/assets/deleteEndpoint.png"/>
 
 > [!WARNING]
 > Excluir o serviço na guia <i>Endpoints</i>/Pontos de extremidade garante que sua assinatura não sofrerá cobranças por recursos de computação, porém ainda haverá a cobrança relacionada ao armazenamento dos dados enquanto o espaço de trabalho existir na sua conta.
@@ -205,6 +205,6 @@ A opção selecionada acima irá carregar a página de criação do recurso <i><
 2. Clique em <i>Delete resource group</i>/Excluir grupo de recurso, digite o nome do recurso para confirmação e siga para <i>Delete</i>.
 
 <br>
-<img src = "deleteResourceGroup"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab01_automatedML/assets/confirmationDeleteResource.png"/>
 
 <br><br>
