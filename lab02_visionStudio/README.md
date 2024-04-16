@@ -90,3 +90,7 @@ Na tela inicial do <a href = "https://portal.vision.cognitive.azure.com">Vision 
 
 > [!NOTE]
 > O retorno JSON dos testes acima pode ser consultado na pasta outputs: <a href = "extractTextSample">Extrair texto 1</a> | <a href = "extractTextCocaCola">Extrair texto 2</a> 
+
+## Limpando o ambiente
+<p align = "justify">Novamente é importante atentar-se ao consumo de seus créditos, logo, caso tenha finalizado os testes para este recurso, é possível excluí-lo ao acessar o <a href = "https://portal.azure.com/">portal Azure</a>, selecionar o recurso a ser excluído e confirmar a ação: 
+<img src = "deleteResource">
