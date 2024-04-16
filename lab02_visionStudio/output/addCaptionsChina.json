@@ -1,0 +1,14 @@
+{
+    "apim-request-id": "f5532110-2837-443f-8c36-8d60aff2629b",
+    "content-length": "184",
+    "content-type": "application/json; charset=utf-8",
+    "modelVersion": "2023-10-01",
+    "captionResult": {
+      "text": "a landscape with trees and a building in the background",
+      "confidence": 0.6658993363380432
+    },
+    "metadata": {
+      "width": 4608,
+      "height": 3456
+    }
+  }

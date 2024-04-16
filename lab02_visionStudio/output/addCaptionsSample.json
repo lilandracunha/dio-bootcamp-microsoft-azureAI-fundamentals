@@ -1,0 +1,14 @@
+{
+    "apim-request-id": "4543d632-3c6c-4bc9-b38d-06128fd34098",
+    "content-length": "161",
+    "content-type": "application/json; charset=utf-8",
+    "modelVersion": "2023-10-01",
+    "captionResult": {
+      "text": "a man holding a surfboard on a rock",
+      "confidence": 0.857716977596283
+    },
+    "metadata": {
+      "width": 375,
+      "height": 250
+    }
+  }
