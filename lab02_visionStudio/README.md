@@ -16,10 +16,11 @@
 1. Acesse o <a href = "https://portal.azure.com/">portal Azure</a> e faça o login através da conta cadastrada;
 2. Ao acessar a página inicial do portal, selecione a opção "<i>+ Create a resource</i>", pesquise por <i>Azure AI services</i> e, ao localizá-lo, clique em "<i>Create</i>":
     <br>
-    <img src = "createAzureAIServices" align = "center"/><br>
+    <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/createAzureAIServices.png" align = "center"/>
+    <br><br>
     A opção selecionada acima irá carregar a página de criação do recurso <i><b>Azure AI services</b></i>, cujas configurações que serão preenchidas podem ser visualizadas a seguir:
     <br>
-    <img src = "createAzureAIServicesSettings" align = "center"/>
+    <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/createAzureAIServicesSettings.png" align = "center"/>
 
   - <b><i>Subscription</i></b>: Sua assinatura do Azure - Por padrão, este campo já estará preenchido conforme a assinatura vigente na conta;
   - <b><i>Resource group</i></b>: Um grupo é uma coleção de recursos que compartilham o mesmo ciclo de vida, permissões e políticas - Selecione um criado anteriormente ou crie um novo grupo de recursos;
@@ -39,58 +40,58 @@
 
 ## Conectando o recurso Azure AI service ao Vision Studio
 1. Após a criação do recurso, acesse o <a href = "https://portal.vision.cognitive.azure.com">Vision Studio</a> e faça login com a sua conta. Neste momento, teremos uma visualização semelhante a imagem a seguir, onde deve ser localizada a opção "<i>View all resources</i>: <br>
-<img src = "getStartedWithVision" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/getStartedWithVision.png" align = "center"/>
 
 2. Na tela seguinte serão apresentados todos os recursos criados em sua assinatura e faz-se necessário selecionar o que deseja utilizar. Ao selecionar o recurso a ser utilizado, será habilitada a opção "<i>Select as default resource</i>" e não serão percebidas alterações na tela, porém basta fechar a seleção e seguir com as próximas etapas. <br>
-<img src = "selectResource" align = "center"/> 
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/selectResource.png" align = "center"/> 
 
 <p align = "justify">Após fechar a tela de seleção do recurso, podemos iniciar as tratativas do Vision Studio. 
 
 ## Gerando legendas para uma imagem
-Na tela inicial do <a href = "https://portal.vision.cognitive.azure.com">Vision Studio</a>, busque a aba "<i><b>Image analysis</b></i>" e selecione a opção "<i>Add captions to images</i>": <br>
-<img src = "selectAddCaptions" align = "center"/> 
+1. Na tela inicial do <a href = "https://portal.vision.cognitive.azure.com">Vision Studio</a>, busque a aba "<i><b>Image analysis</b></i>" e selecione a opção "<i>Add captions to images</i>": <br>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/selectAddCaptions.png" align = "center"/> 
 
 2. Ao clicar na inclusão de legendas para imagens, marque a opção logo abaixo de "<i>Try it out</i>" concordando que entende a política de uso do recurso selecionado previamente;
 
 3. O próprio Vision Studio fornece algumas opções de imagens para teste e ao clicar em cada uma delas serão trazidas informações de acordo com o que está pré-definido: <br>
-<img src = "addCaptionsSample" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/addCaptionsSample.png" align = "center"/>
 
 <p align = "justify">Para testar mais um pouco, pesquisei em mecanismos de busca imagens sinalizadas com o filtro "Licenças Creative Commons", selecionei uma paisagem com poucos detalhes e adicionei ao serviço: <br>
-<img src = "addCaptionsChina" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/addCaptionsChina.png" align = "center"/>
 
 > [!NOTE]
-> O retorno JSON dos testes acima pode ser consultado na pasta outputs: <a href = "addCaptionsSample">Gerar legenda 1</a> | <a href = "addCaptionsChina">Gerar legenda 2</a> 
+> O retorno JSON dos testes acima pode ser consultado na pasta outputs: <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/output/addCaptionsSample.json">Gerar legenda 1</a> | <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/output/addCaptionsChina.json">Gerar legenda 2</a> 
 
 ## Detectando rostos no Vision Studio
 1. Na tela inicial do <a href = "https://portal.vision.cognitive.azure.com">Vision Studio</a>, busque a aba "<i><b>Face</b></i>" e selecione a opção "<i>Detect Faces in an image</i>": <br>
-<img src = "selectDetectFaces" align = "center"/> 
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/selectDetectFaces.png" align = "center"/> 
 
 2. Ao clicar na detecção de rostos, marque a opção logo abaixo de "<i>Try it out</i>" concordando que entende a política de uso do recurso selecionado previamente (caso esta não esteja selecionada);
 
 3. O próprio Vision Studio fornece algumas opções de imagens para teste e ao clicar em cada uma delas serão trazidas informações de acordo com o que está pré-definido: <br>
-<img src = "detectFacesSample" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/detectFacesSample.png" align = "center"/>
 
 <p align = "justify">Para testar mais um pouco, pesquisei em mecanismos de busca imagens sinalizadas com o filtro "Licenças Creative Commons", selecionei uma que se enquadrou no parâmetro utilizado no modelo pré-definido e adicionei ao serviço. O retorno foi capaz de apontar detalhes do uso da máscara, porém vemos que o reconhecimento para o rosto 2 não foi completamente satisfatório: <br>
-<img src = "detectFacesMask" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/detectFacesMask.png" align = "center"/>
 
 > [!NOTE]
-> O retorno JSON dos testes acima pode ser consultado na pasta outputs: <a href = "detectFacesSample">Detecção de Rosto 1</a> | <a href = "detectFacesMask">Detecção de Rosto 2</a> 
+> O retorno JSON dos testes acima pode ser consultado na pasta outputs: <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/output/detectFacesSample.json">Detecção de Rosto 1</a> | <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/output/detectFacesMask.json">Detecção de Rosto 2</a> 
 
 ## Extraindo texto a partir de imagens
 1. Na tela inicial do <a href = "https://portal.vision.cognitive.azure.com">Vision Studio</a>, busque a aba "<i><b>Optical character recognition</b></i>" e selecione a opção <i>Extract text from images</i>: <br>
-<img src = "selectExtractText" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/selectExtractText.png" align = "center"/>
 
 2. Ao clicar na extração de texto, marque a opção logo abaixo de "<i>Try it out</i>" concordando que entende a política de uso do recurso selecionado previamente (caso esta não esteja selecionada);
 
 3. O próprio Vision Studio fornece algumas opções de imagens para teste e ao clicar em cada uma delas serão trazidas informações de acordo com o que está pré-definido: <br>
-<img src = "extractTextSample" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/extractTextSample.png" align = "center"/>
 
 <p align = "justify">Para novos testes, inclui uma imagem própria para validação do retorno:<br>
-<img src = "extractTextCocaCola" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/extractTextCocaCola.png" align = "center"/>
 
 > [!NOTE]
-> O retorno JSON dos testes acima pode ser consultado na pasta outputs: <a href = "extractTextSample">Extrair texto 1</a> | <a href = "extractTextCocaCola">Extrair texto 2</a> 
+> O retorno JSON dos testes acima pode ser consultado na pasta outputs: <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/output/extractTextSample.json">Extrair texto 1</a> | <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/output/extractTextCocaCola.json">Extrair texto 2</a> 
 
 ## Limpando o ambiente
-<p align = "justify">Novamente é importante atentar-se ao consumo de seus créditos, logo, caso tenha finalizado os testes para este recurso, é possível excluí-lo ao acessar o <a href = "https://portal.azure.com/">portal Azure</a>, selecionar o recurso a ser excluído e confirmar a ação: 
-<img src = "deleteResource">
+<p align = "justify">Novamente é importante atentar-se ao consumo de seus créditos, logo, caso tenha finalizado os testes para este recurso, é possível excluí-lo ao acessar o <a href = "https://portal.azure.com/">portal Azure</a>, selecionar o recurso a ser excluído e confirmar a ação: <br>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab02_visionStudio/assets/deleteResource.png">
