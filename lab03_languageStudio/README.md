@@ -12,31 +12,33 @@
 <br><br>
 
 ## Criando o recurso no Azure AI
-<p align = "justify">É possível criar um recurso específico para utilizar os serviços Language e Speech, porém ambos podem ser acessados através do Azure AI services (o mesmo criado no <a href = "">laboratório anterior</a>). 
+<p align = "justify">É possível criar um recurso específico para utilizar os serviços Language e Speech, porém ambos podem ser acessados através do Azure AI services (o mesmo criado no <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/tree/main/lab02_visionStudio">laboratório anterior</a>). 
 
 ## Explorando o Speech Studio
 <p align = "justify">Notei que mesmo a minha conta estando em inglês, o Speech Studio estava em português assim que o acessei, então as etapas a seguir encontram-se em ambos os idiomas. 
 
 1. Acesse o <a href = "https://speech.microsoft.com/portal">Speech Studio</a> e faça login com a sua conta. Neste momento, teremos uma visualização semelhante a imagem a seguir: <br>
-<img src = "getStartedWithSpeech" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/getStartedWithSpeech.png" align = "center"/>
 
 2. Note na imagem acima que temos a informação "<i>You don't have any recent projects yet</i>/Você ainda não tem nenhum projeto recente", sendo necessário selecionar o recurso que será utilizado (ressaltando que é possível optar pelo recurso Azure AI services). Para isto, basta selecionar as Configurações, marcar o recurso previamente criado e clicar em "<i>Use resource</i>/Usar o recurso": <br>
-<img src = "useResource">
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/useResource.png">
 
 3. Feche as configurações e, na tela inicial do Speech Studio, busque por "<i>Speech to text</i>/Conversão de fala em texto", onde será selecionada a opção "<i>Real-time speech to text</i>/Conversão de fala em texto em tempo real": <br>
-<img src = "speechToTextOption" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/speechToTextOption.png" align = "center"/>
 
 4. Na tela do serviço será visualizado o campo para importação de um arquivo de áudio que será convertido em texto e a própria documentação do Speech Studio fornece um (arquivo) para teste (<a href = "https://aka.ms/mslearn-speech-files">speech.zip</a>). Baixe o arquivo da documentação e faça o upload no serviço:
-    > [!IMPORTANT]
-    > Antes de selecionar o arquivo, atente-se ao idioma do áudio, que deverá ser informado em "<i>Choose a language</i>/Escolher um idioma" 
 
-    <br>
-    <img src = "realTimeSample" align = "center"/>
+> [!IMPORTANT]
+> Antes de selecionar o arquivo, atente-se ao idioma do áudio, que deverá ser informado em "<i>Choose a language</i>/Escolher um idioma" 
 
-    <p align = "justify">Fiz mais um teste utilizando um áudio de um jogo. A frase escolhida foi "<a href = ""><i>It's the dream that makes us giants. Just gotta dream big enough</i></a>" e o resultado não foi totalmente preciso em relação ao "<i>gotta</i>". No primeiro teste, deixei o idioma como Inglês (Estados Unidos) e o retorno pode ser conferido na imagem <b>1</b>; no teste seguinte utilizei a mesma frase, porém alterei o idioma para Inglês (Reino Unido) e o retorno está presente na imagem <b>2</b>: </br> 
-    <img src = "realTimePersonalTest1" align = "center"/> 
+<br>
+    <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/realTimeSample.png" align = "center"/>
+    <p align = "justify">Fiz mais um teste utilizando um áudio de um jogo. A frase escolhida foi "<a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/inputs/sennaTrueDamage.m4a"><i>It's the dream that makes us giants. Just gotta dream big enough</i></a>" e o resultado não foi totalmente preciso em relação ao "<i>gotta</i>". No primeiro teste, deixei o idioma como Inglês (Estados Unidos) e o retorno pode ser conferido na imagem <b>1</b>; no teste seguinte utilizei a mesma frase, porém alterei o idioma para Inglês (Reino Unido) e o retorno está presente na imagem <b>2</b>: </br> 
+    <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/realTimePersonalTest1.png" align = "center"/> 
     <br>
-    <img src = "realTimePersonalTest2" align = "center"/>
+    <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/realTimePersonalTest2.png" align = "center"/>
+
+<br>
 
 ## Analisando sentimento com o Language Studio
 <p align = "justify">Conforme citado no início deste guia, é possível utilizar o Language Studio através de um recurso Azure AI services, porém existem instâncias onde apenas o recurso Language Studio pode ser utilizado. Pensando nesta informação presente na documentação, iremos seguir para a criação do recurso específico:
@@ -44,10 +46,10 @@
 1. Acesse o <a href = "https://portal.azure.com/">portal Azure</a> e faça o login através da conta cadastrada;
 2. Ao acessar a página inicial do portal, selecione a opção "<i>+ Create a resource</i>", pesquise por <i>Language service</i> e, ao localizá-lo, clique em "<i>Create</i>":
     <br>
-    <img src = "selectLanguageResource" align = "center"/>
+    <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/selectLanguageResource.png" align = "center"/>
     <br><br>
     A opção selecionada acima irá carregar a página de criação do recurso <i><b>Language service</b></i> e a primeira etapa consiste em selecionar as features adicionais que serão inclusas na criação. Podemos deixar apenas o default e clicar em "<i>Continue to create your resource</i>": <br>
-    <img src = "resourceAdditionalFeatures" align = "center"/>
+    <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/resourceAdditionalFeatures.png" align = "center"/>
 
     Já as configuações do recurso serão preenchidas podem ser consultadas a seguir:
   - <b><i>Subscription</i></b>: Sua assinatura do Azure - Por padrão, este campo já estará preenchido conforme a assinatura vigente na conta;
@@ -60,10 +62,10 @@
 3. Selecione "Review + create" e depois "Create" e aguarde a conclusão do <i>deploy</i>; 
 
 4. Uma vez finalizado o deploy, siga para o <a href = "https://language.cognitive.azure.com">Language Studio</a> e faça o login em sua conta. Será apresentada a tela de seleção de recurso, onde basta informar a sua assinatura (campo "<i>Subscription</i>") e o nome do recurso (<i>Name</i>): <br>
-<img src = "selectAzureResource" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/selectAzureResource.png" align = "center"/>
 
 5. Após configurar o recurso a ser utilizado, a página inicial será visualizada novamente e nela deve ser selecionada a aba "<i>Classify text</i>", onde iremos clicar em "<i>Analyze sentiment and mine opinions</i>": <br>
-<img src = "analyzeSentimentOption" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/analyzeSentimentOption.png" align = "center"/>
 
 6. Para o exemplo disponibilizado pela documentação, iremos manter o idioma em inglês e apenas vamos copiar o texto fornecido no campo "<i>Enter your own text, upload a file, or use one of our sample texts</i>":
     - Input:
@@ -74,13 +76,14 @@
         This is an old hotel (has been around since 1950's) and the room furnishings are average - becoming a bit old now and require changing. The internet didn't work and had to come to one of their office rooms to check in for my flight home. The website says it's close to the British Museum, but it's too far to walk.
     ```
     <p align = "justify">Mantenha a opção "<i>Enable opinion mining</i>" selecionada, marque a box "<i>I acknowledge that running this demo will incur usage and may incur costs to my Azure resource</i>" e clique em "<i>Run</i>": <br>
-    <img src = "runSentimentAnalysis" align = "center"/> <br>
+    <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/runSentimentAnalysis.png" align = "center"/> <br>
     
     - Output - Através do input, o serviço fará uma análise e trará palavras-chave que representam o sentimento apontado no que foi reportado: <br>
-    <img src = "sentimentAnalysisSample" align = "center"/>
+    <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/sentimentAnalysisSample.png" align = "center"/>
     <br><br>
-    <p align = "justify">Após alguns testes, realizei uma validação com um <a href = "resortFeedback.txt">feedback</a> criado com auxílio de IA generativa, para o qual tive o seguinte retorno: <br>
-    <img src = "sentimentAnalysisResortFeedback" align = "center"/>
+    <p align = "justify">Após alguns testes, realizei uma validação com um <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/inputs/resortFeedback.txt">feedback</a> criado com auxílio de IA generativa, para o qual tive o seguinte retorno: 
+    <br>
+    <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab03_languageStudio/assets/sentimentAnalysisResortFeedback.png" align = "center"/>
     <br>
     <details>
         <summary>Retorno JSON</summary> 
