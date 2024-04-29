@@ -17,8 +17,8 @@
 1. Acesse o <a href = "https://portal.azure.com/">portal Azure</a> e faça o login através da conta cadastrada;
 2. Ao acessar a página inicial do portal, selecione a opção "<i>+ Create a resource</i>", pesquise por <i>Azure AI Search</i> e, ao localizá-lo, clique em "<i>Create</i>":
 <br>
-<img src = "selectAISearchResource" align = "center"/>
-<br><br>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/selectAISearchResource.png" align = "center"/>
+<br>
 A opção selecionada acima irá carregar a página de criação do recurso <i><b>Azure AI Search</b></i>, cujas configurações que serão preenchidas podem ser visualizadas a seguir:
 
   - <b><i>Subscription</i></b>: Sua assinatura do Azure;
@@ -46,7 +46,7 @@ A opção selecionada acima irá carregar a página de criação do recurso <i><
 
 ### Criando uma conta de armazenamento
 1. Retorne para a página inicial do Azure portal e busque pela opção <i><b>Storage accounts</b></i> (caso esta opção não apareça no início, é possível selecionar "<i>+ Create a resource</i>" para buscá-la): <br>
-<img src = "selectStorageAccounts" align = "center"/> 
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/selectStorageAccounts.png" align = "center"/> 
 
 2. Dentro de <i>Storage accounts</i>, selecione "<i>+Create</i>" e note que serão apresentados campos para preenchimento iguais aos vistos nos demais recursos já criados, sendo:
 
@@ -63,38 +63,38 @@ A opção selecionada acima irá carregar a página de criação do recurso <i><
 3. Uma vez que o <i>deploy</i> tenha sido finalizado, acesse o recurso criado; 
 
 4. O <i>Storage account</i> possui regras de segurança que devem ser configuradas para a execução deste laboratório. Para isto, procure a opção "<i>Configuration</i>" no menu esquerdo: <br>
-<img src = "storageAccountView" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/storageAccountView.png" align = "center"/>
 
 5. Altere para ```Enabled``` a opção "<i>Allow Blob anonymous access</i>" e clique em "<i>Save</i>". <br>
-<img src = "enableAllowBlob" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/enableAllowBlob.png" align = "center"/>
 
 
 ## Carregando documentos no Azure Storage
 1. Sem precisar sair da tela em que estávamos na etapa anterior, procure pela opção "<i>Containers</i>" no menu esquerdo: <br>
-<img src = "selectContainers" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/selectContainers.png" align = "center"/>
 
 2. Na criação do <i>container</i>, clique em "<i>+ Container</i>" e adicione as seguintes informações: 
 
   - <b><i>Name</i></b>: ```coffee-reviews```;
   - <b><i>Public access level</i></b>: ```Container (anonymous read access for containers and blobs)```;
   - <b><i>Advanced</i></b>: Não é necessário alterar. <br> 
-  <img src = "newContainer" align = "center"/>
+  <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/newContainer.png" align = "center"/>
 
 3. Clique em "<i>Create</i>";
 
 4. Após a criação, acesse a documentação para fazer o download dos <a href = "https://aka.ms/mslearn-coffee-reviews">documentos</a> que serão adicionados ao <i>container</i> criado. Concluído o download, descompacte a pasta com as <i>reviews</i>;
 
 5. Na página <i>Containers</i>, selecione "<i>coffee-reviews</i>" e faça upload dos arquivos de <i>review</i> da pasta baixada: <br>
-<img src = "uploadReviews" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/uploadReviews.png" align = "center"/>
 
 ## Extraindo insights dos documentos
 <p align = "justify">Agora que os documentos estão armazenados no Azure Storage, iremos começar a extrair informações deles. 
 
 1. Acesse o <i><b>Azure AI Search</b></i> - O recurso pode ser acessado pelo portal Azure ou pela busca na página em que finalizamos a última etapa executada: <br>
-<img src = "aiSearch" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/aiSearch.png" align = "center"/>
 
 2. Selecione o recurso criado para o AI Search e clique em "<i>Import data</i>": <br>
-<img src = "importData" align = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/importData.png" align = "center"/>
 
 3. Em <i>Import data</i> serão apresentadas algumas abas. Iremos na guia "<i>Connect to your data</i>" e selecionaremos "<i>Azure Blob Storage</i>" para "<i><b>Data Source</b></i>". Ao selecionar o <i>data source</i>, serão preenchidos os valores:
 
@@ -129,13 +129,13 @@ A opção selecionada acima irá carregar a página de criação do recurso <i><
     - Image projections
     - Documents (Automaticamente serão selecionadas as demais opções: Pages, Key phrases, Entities, Image details e Image references). 
   
-    > [!NOTE]
-    > Neste ponto, assim que selecionei a opção <i>Image projections</i>, um aviso em vermelho apareceu na tela. 
-    > <br><br>
-    > <img src = "chooseConnection" aling = "center"/>
-    > <br><br>
-    > Caso seja apresentado o mesmo alerta, clique em "<i>Choose an existing connection</i>", selecione a sua conta de armazenamento > "<i>+ Container</i>" > <b><i>Name</i></b>: ```knowledge-store```, <b><i>Anonymous access level</i></b>: ```Private``` e clique em "<i>Create</i>"; <br>
-    > Selecione o <i>container</i> criado e clique em "<i>Select</i>". 
+  > [!NOTE]
+  > Neste ponto, assim que selecionei a opção <i>Image projections</i>, um aviso em vermelho apareceu na tela. 
+  > <br><br>
+  > <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/chooseConnection.png" aling = "center"/>
+  > <br><br>
+  > Caso seja apresentado o mesmo alerta, clique em "<i>Choose an existing connection</i>", selecione a sua conta de armazenamento > "<i>+ Container</i>" > <b><i>Name</i></b>: ```knowledge-store```, <b><i>Anonymous access level</i></b>: ```Private``` e clique em "<i>Create</i>"; <br>
+  > Selecione o <i>container</i> criado e clique em "<i>Select</i>". 
 
 
 7. Selecione <b><i>Azure blob projections</i></b>: Document e não altere o nome do <i>container</i>;
@@ -161,10 +161,10 @@ A opção selecionada acima irá carregar a página de criação do recurso <i><
  - Mapeia os campos extraídos para o índice.
 
 12. Volte para a página do recurso Azure AI Search criado para este laboratório. No menu esquerdo, procure pela opção "<b><i>Indexers</i></b>: <br>
-<img src = "selectIndexers" aling = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/selectIndexers.png" aling = "center"/>
 
 13. Na tela apresentada, selecione o indexador ```coffee-indexer```: <br>
-<img src = "coffeeIndexer" aling = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/coffeeIndexer.png" aling = "center"/>
 
 > [!NOTE]
 > Caso a seleção do indexer retorno erro, clique em <i>Refresh</i> até que seja retornado sucesso na execução. 
@@ -249,7 +249,7 @@ A opção selecionada acima irá carregar a página de criação do recurso <i><
 <p align = "justify">Usaremos o <i><b>Search Explorer</b></i> para criar consultas para o index criado - O explorer é uma ferramenta Azure que permite validar a qualidade do índex; com ele, é possível escrever consultas e revisar resultados em JSON. 
 
 1. Dentro do serviço de pesquisa, em "<b><i>Overview</i></b>", selecione "<b><i>Search explorer</i></b>": <br>
-<img src = "searchExplorer" aling = "center"/>
+<img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/searchExplorer.png" aling = "center"/>
 
 2. Será apresentada a tela de pesquisa, na qual iremos selecionar a opção "<b><i>View</i></b>" e, em seguida, iremos definir a consulta para "<b><i>JSON view</i></b>"; 
 
@@ -261,7 +261,7 @@ A opção selecionada acima irá carregar a página de criação do recurso <i><
   }
   ```
 
-  <img src = "searchCount" aling = "center"/>
+  <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/searchCount.png" aling = "center"/>
 
 4. Após receber o retorno com todos os documentos, iremos filtrar por local. Para isto, copie a seguinte consulta no <b><i>JSON query editor</i></b> e clique em "<b><i>Search</i></b>": 
   ```
@@ -271,7 +271,7 @@ A opção selecionada acima irá carregar a página de criação do recurso <i><
     }
   ```
 
-  <img src = "searchChicago" aling = "center"/>
+  <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/searchChicago.png" aling = "center"/>
 
 5. Como última consulta, iremos filtrar as avaliações negativas, copiando a consulta abaixo no <b><i>JSON query editor</i></b> e clicando em "<b><i>Search</i></b>":
   ```
@@ -281,4 +281,4 @@ A opção selecionada acima irá carregar a página de criação do recurso <i><
     }
   ```
 
-  <img src = "searchNegative" aling = "center"/>
+  <img src = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/blob/main/lab04_cognitiveSearch/assets/searchNegative.png" aling = "center"/>
