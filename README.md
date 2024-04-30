@@ -22,4 +22,4 @@ Maiores informações sobre o bootcamp podem ser visualizadas a seguir:
 | Análise de imagem 4.0 com o AI Vision Service | <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/tree/main/lab02_visionStudio">lab02_visionStudio</a> |
 | Análise de sentimentos com Language Studio no Azure AI | <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/tree/main/lab03_languageStudio">lab03_languageStudio</a> |
 | Utilizando AI Search para indexação e consulta de dados | <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/tree/main/lab04_cognitiveSearch">lab04_cognitiveSearch</a> |
-| Projeto5 | <a href = "">Projeto5</a> |
+| Explorando os recursos de IA Generativa com Copilot e OpenAI | <a href = "https://github.com/lilandracunha/dio-bootcamp-microsoft-azureAI-fundamentals/tree/main/lab05_openAI">lab05_openAI</a> |
