@@ -1,3 +1,10 @@
+> **Repositório arquivado | Archived repository**
+>
+> Este repositório não é mais mantido ativamente. Seu conteúdo foi reorganizado e centralizado no repositório [`bootcamps-and-foundations`](https://github.com/lilandracunha/bootcamps-and-foundations), dentro da pasta `bootcamps/`.
+>
+> This repository is preserved as a historical record of the original bootcamp.
+---
+
 # Microsoft Azure AI Fundamentals
 ### Bootcamp disponibilizado através de uma parceria da Microsoft com a Digital Innovation One (DIO)
 <br>
